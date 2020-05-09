@@ -12,42 +12,60 @@ call plug#begin()
 
 " Makes available the base16 themes. For information about base16, visit
 " https://github.com/chriskempson/base16.
+"
 Plug 'chriskempson/base16-vim'
 
+" Saves vim sessions automatically.
+"
+Plug 'tpope/vim-obsession'
+
+" Configures navigation of splits by using <Ctrl><hjkl>. When combined with
+" bindings in tmux, the same command navigates seamlessly between tmux and
+" vim splits.
+"
 Plug 'christoomey/vim-tmux-navigator'
 
 " Enhances motions to navigate by matching two characters. Trigger by typing
 " s{char}{char}. Learn more by typing :help sneak.
+"
 Plug 'justinmk/vim-sneak'
 
 " A light and configurable statusline/tabline plugin for Vim.
+"
 Plug 'itchyny/lightline.vim'
 
 " Make the yanked region apparent!
+"
 Plug 'machakann/vim-highlightedyank'
 
 " Extends Vim's % key to match language-specific words.
+"
 Plug 'andymass/vim-matchup'
 
 " For known project structures, open files from the root of the project, no
 " matter which directory is the current working directory.
+"
 Plug 'airblade/vim-rooter'
 
 " A general-purpose command-line fuzzy finder.
+"
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Semantic language support
+"
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " Syntactic language support
+"
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'rust-lang/rust.vim'
 Plug 'dag/vim-fish'
 Plug 'plasticboy/vim-markdown'
 
-" Vim script for text filtering and alignment. Run by using :Tabularize.
+" Vim script for text alignment. Run by using :Tabularize.
+"
 Plug 'godlygeek/tabular'
 
 call plug#end()
