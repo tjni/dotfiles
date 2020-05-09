@@ -1,0 +1,45 @@
+#!/usr/local/bin/fish
+
+{{ if eq .chezmoi.os "darwin" }}
+
+if test ! -f /usr/local/bin/alacritty
+  brew cask install alacritty
+end
+
+if test ! -f /usr/local/bin/bat
+  brew install bat
+end
+
+if test ! -f /usr/local/bin/exa
+  brew install exa
+end
+
+if test ! -f /usr/local/bin/nvim
+  brew install neovim
+end
+
+if test ! -f /usr/local/bin/rg
+  brew install ripgrep
+end
+
+if test ! -f /usr/local/bin/tmux
+  brew install tmux
+end
+
+# This enables accessing the OSX pasteboard from tmux.
+#
+#   https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
+#
+if test ! -f /usr/local/bin/reattach-to-user-namespace
+  brew install reattach-to-user-namespace
+end
+
+{{ end }}
+
+if test ! -d ~/.tmux/plugins/tpm
+  # Install the Tmux Plugin Manager.
+  #
+  # After this, don't forget to run <prefix>I in tmux.
+  #
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+end

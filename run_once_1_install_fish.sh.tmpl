@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+{{ if eq .chezmoi.os "darwin" }}
+
+if [ ! -f "/usr/local/bin/fish" ]; then
+  FISH_INSTALL=1
+  brew install fish
+fi
+
+{{ end }}
+
+if [ ! -z $FISH_INSTALL ]; then
+  # Change the default shell to Fish.
+  #
+  #  https://fishshell.com/
+  #
+  chsh -s /usr/local/bin/fish
+fi
