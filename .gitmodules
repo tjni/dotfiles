@@ -1,0 +1,3 @@
+[submodule "private_dot_tmux/private_plugins/private_tpm"]
+	path = private_dot_tmux/private_plugins/private_tpm
+	url = https://github.com/tmux-plugins/tpm
