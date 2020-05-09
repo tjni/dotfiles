@@ -1,10 +1,12 @@
-# Prefer the neovim fork of vim.
-#
-#   https://neovim.io/
-#
-abbr -a vim nvim
-
 if status --is-interactive
+  # Prefer the neovim fork of vim.
+  #
+  #   https://neovim.io/
+  #
+  abbr -a    vi nvim
+  abbr -a   vim nvim
+  setenv EDITOR nvim
+
   # Replace a new interactive shell with tmux, using the first window as the
   # target window.
   #
