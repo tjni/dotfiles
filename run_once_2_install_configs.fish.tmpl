@@ -26,6 +26,10 @@ if test ! -f /usr/local/bin/tmux
   brew install tmux
 end
 
+if test ! -f /usr/local/bin/watchman
+  brew install watchman
+end
+
 # This enables accessing the OSX pasteboard from tmux.
 #
 #   https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
