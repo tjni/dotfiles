@@ -45,6 +45,11 @@
   vimcompatible = true
 
   #
+  # Do not show the file tree on startup to speed things up.
+  #
+  enable_vimfiler_welcome = false
+
+  #
   # Load custom vim configurations.
   #
   bootstrap_after = "bootstrap#after"
@@ -80,16 +85,18 @@
   #
   name = "lsp"
 
-  filetypes = [
-    "java",
-    "rust"
-  ]
-
 [[layers]]
   #
   # We will try to use and improve coc.nvim for this.
   #
   name = "checkers"
+  enable = false
+
+[[layers]]
+  #
+  # Enable this again if neoformat is needed.
+  #
+  name = "format"
   enable = false
 
 [[layers]]

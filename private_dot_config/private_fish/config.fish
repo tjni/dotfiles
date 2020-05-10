@@ -1,8 +1,15 @@
+#
+# Set up home directory for Volta.
+#
+set -gx volta_home '/users/tni/.volta'
+
+#
 # Add directories to PATH.
 #
-set -U fish_user_paths $fish_user_paths ~/.cargo/bin
+set -U fish_user_paths $fish_user_paths ~/.cargo/bin '$volta_home/bin'
 
 if status --is-interactive
+  #
   # Prefer the neovim fork of vim.
   #
   #   https://neovim.io/
@@ -11,11 +18,13 @@ if status --is-interactive
   abbr -a   vim nvim
   setenv EDITOR nvim
 
+  #
   # Replace a new interactive shell with tmux, using the first window as the
   # target window.
   #
 	tmux ^ /dev/null; and exec true
 
+  #
   # Consistency when opening a file.
   #
   # From the terminal:
@@ -26,6 +35,7 @@ if status --is-interactive
   #
   abbr -a e nvim
 
+  #
   # Prefer exa, which is "a modern replacement for ls".
   #
   #   https://the.exa.website/
@@ -37,6 +47,7 @@ if status --is-interactive
   	abbr -a ll 'ls -l'
   end
 
+  #
   # Prefer bat, which is a better version of cat.
   #
   #   https://github.com/sharkdp/bat
@@ -88,6 +99,7 @@ if status --is-interactive
     set_color normal
   end
 
+  #
   # Setup autojump, a "cd command that learns". Its command from the shell is
   # mapped to "j".
   #
@@ -97,6 +109,7 @@ if status --is-interactive
     source /usr/local/share/autojump/autojump.fish;
   end
 
+  #
   # Adds color to man pages.
   #
   #   http://linuxtidbits.wordpress.com/2009/03/23/less-colors-for-man-pages/

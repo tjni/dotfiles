@@ -23,6 +23,17 @@ function! bootstrap#after() abort
   " Modify the base16 theme to have brighter comments.
   "
   call Base16hi("Comment", g:base16_gui09, "", g:base16_cterm09, "", "", "")
+
+  "
+  " Register language servers with coc.nvim.
+  "
+  let g:coc_global_extensions = [
+    "coc-java",
+    "coc-json",
+    "coc-pyright",
+    "coc-rust-analyzer",
+    "coc-tsserver"
+  ]
 endfunction
 
 function! s:UseSpaceLeader() abort
