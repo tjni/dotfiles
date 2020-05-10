@@ -70,7 +70,7 @@
   #
   #  https://github.com/neoclide/coc.nvim
   #
-  # autocomplete_method = "coc"
+  autocomplete_method = "coc"
 
   #
   # Load custom vim configurations.
@@ -90,8 +90,6 @@
   # parameters.
   #
   auto_completion_tab_key_behavior = "smart"
-
-  enable = false
 
 [[layers]]
   #
