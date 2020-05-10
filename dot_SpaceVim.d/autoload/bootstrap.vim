@@ -1,4 +1,6 @@
 function! bootstrap#before() abort
+  let g:dein#install_log_filename = '/Users/tni/log.txt'
+
   " Enable 24-bit RGB color for proper colors.
   "
   "   https://neovim.io/doc/user/options.html#'termguicolors'
@@ -22,18 +24,23 @@ function! bootstrap#after() abort
   "
   " Modify the base16 theme to have brighter comments.
   "
-  call Base16hi("Comment", g:base16_gui09, "", g:base16_cterm09, "", "", "")
+  call Base16hi('Comment', g:base16_gui09, '', g:base16_cterm09, '', '', '')
+
+  "
+  " Temporary.
+  "
+  call dein#add('neoclide/coc.nvim', { 'merged':0, 'rev': 'release' })
 
   "
   " Register language servers with coc.nvim.
   "
   let g:coc_global_extensions = [
-    "coc-java",
-    "coc-json",
-    "coc-pyright",
-    "coc-rust-analyzer",
-    "coc-tsserver"
-  ]
+      \'coc-java',
+      \'coc-json',
+      \'coc-pyright',
+      \'coc-rust-analyzer',
+      \'coc-tsserver',
+  \]
 endfunction
 
 function! s:UseSpaceLeader() abort
@@ -48,7 +55,7 @@ function! s:UseSpaceLeader() abort
   " its mappings for the [SPC] command if it detects the leader was already
   " set to <Space>, and we want to keep those mappings.
   "
-  let g:mapleader = "\<Space>"
+  let g:mapleader = '\<Space>'
 
   "
   " Until SpaceVim adds the option to set up a custom [SPC] mapping, we need

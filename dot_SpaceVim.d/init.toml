@@ -50,19 +50,35 @@
   enable_vimfiler_welcome = false
 
   #
+  # Turn off snippets to speed up load time. I don't find them useful.
+  #
+  snippet_engine = ""
+
+  #
+  # Disable plugins I do not use that SpaceVim adds by default.
+  #
+  disabled_plugins = [
+    "CompleteParameter.vim",
+    "neco-syntax",
+    "neoinclude.vim",
+    "neosnippet-snippets",
+    "vim-snippets",
+  ]
+
+  #
+  # Use coc.nvim to power autocompletion.
+  #
+  #  https://github.com/neoclide/coc.nvim
+  #
+  # autocomplete_method = "coc"
+
+  #
   # Load custom vim configurations.
   #
   bootstrap_after = "bootstrap#after"
 
 [[layers]]
   name = "autocomplete"
-  #
-  # Use coc.nvim to power autocompletion. This requires enabling the LSP layer
-  # also, because coc.nvim relies on language servers.
-  #
-  #  https://github.com/neoclide/coc.nvim
-  #
-  autocomplete_method = "coc"
 
   #
   # When the Return/Enter key is pressed, completes with the current selection.
@@ -75,15 +91,7 @@
   #
   auto_completion_tab_key_behavior = "smart"
 
-[[layers]]
-  #
-  # Enable Language Server Protocol (LSP) support for various languages. The
-  # LSP is a protocol between an editor and a language server, which provides 
-  # language features like auto complete, go to definition, etc.
-  #
-  #   https://microsoft.github.io/language-server-protocol/
-  #
-  name = "lsp"
+  enable = false
 
 [[layers]]
   #
