@@ -1,0 +1,143 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2017 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+[options]
+  #
+  # Load custom vim configurations.
+  #
+  bootstrap_before = "bootstrap#before"
+
+  #
+  # This color scheme is provided by the 'chriskempson/base16-vim' plugin.
+  #
+  colorscheme = "base16-gruvbox-dark-hard"
+  colorscheme_bg = "dark"
+
+  #
+  # Use the Hack font patched by the Nerd Fonts project.
+  #
+  #   https://sourcefoundry.org/hack/
+  #   https://www.nerdfonts.com/
+  #
+  # This only applies when opening vim or neovim in a GUI application. When
+  # opening from a terminal, this configuration lives with the terminal.
+  #
+  guifont = "Hack Nerd Font Mono:h16"
+
+  #
+  # Customize the display of the status line.
+  #
+  statusline_right_sections = [
+    "fileformat",
+    "percentage",
+    "cursorpos"
+  ]
+
+[[layers]]
+  name = "autocomplete"
+  #
+  # Use coc.nvim to power autocompletion. This requires enabling the LSP layer
+  # also, because coc.nvim relies on language servers.
+  #
+  #  https://github.com/neoclide/coc.nvim
+  #
+  autocomplete_method = "coc"
+
+  #
+  # When the Return/Enter key is pressed, completes with the current selection.
+  #
+  auto_completion_return_key_behavior = "complete"
+
+  #
+  # When the TAB key is pressed, cycle candidates, expand snippets, and jump
+  # parameters.
+  #
+  auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+  #
+  # Enables Language Server Protocol (LSP) support for various languages. The
+  # LSP is a protocol between an editor and a language server, which provides 
+  # language features like auto complete, go to definition, etc.
+  #
+  #   https://microsoft.github.io/language-server-protocol/
+  #
+  name = "lsp"
+
+  filetypes = [
+    "java",
+    "rust"
+  ]
+
+[[layers]]
+  #
+  # Enable quick access to the shell, using SPC '.
+  #
+  name = "shell"
+  default_position = "bottom"
+
+[[layers]]
+  #
+  # Enable seamless navigation between vim and tmux panes.
+  #
+  name = "tmux"
+
+[[custom_plugins]]
+  #
+  # This plugin makes base16 themes available to Vim. Base16 is an architecture
+  # for building themes that provide consistent colors for syntax highlighting.
+  #
+  name = "chriskempson/base16-vim"
+
+[[custom_plugins]]
+  #
+  # This plugin saves vim session automatically.
+  #
+  name = "tpope/vim-obsession"
+
+[[custom_plugins]]
+  #
+  # This plugin highlights the yanked region for some time.
+  #
+  name = "machakann/vim-highlightedyank"
+
+[[custom_plugins]]
+  #
+  # This plugin extends vim's % key to match language-specific words.
+  #
+  name = "andymass/vim-matchup"
+
+[[custom_plugins]]
+  #
+  # Syntax support for TOML.
+  #
+  name = "cespare/vim-toml"
+
+[[custom_plugins]]
+  #
+  # Syntax support for YAML.
+  #
+  name = "stephpy/vim-yaml"
+
+[[custom_plugins]]
+  #
+  # Syntax support for Rust.
+  #
+  name = "rust-lang/rust.vim"
+
+[[custom_plugins]]
+  #
+  # Syntax support for Fish.
+  #
+  name = "dag/vim-fish"
+
+[[custom_plugins]]
+  #
+  # Syntax support for Markdown.
+  #
+  name = "plasticboy/vim-markdown"
