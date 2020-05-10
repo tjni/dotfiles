@@ -38,6 +38,17 @@
     "cursorpos"
   ]
 
+  #
+  # Do not remap the "s", "q", and "," keys for SpaceVim. It's very valuable
+  # to use these keys for other purposes.
+  #
+  vimcompatible = true
+
+  #
+  # Load custom vim configurations.
+  #
+  bootstrap_after = "bootstrap#after"
+
 [[layers]]
   name = "autocomplete"
   #
@@ -61,7 +72,7 @@
 
 [[layers]]
   #
-  # Enables Language Server Protocol (LSP) support for various languages. The
+  # Enable Language Server Protocol (LSP) support for various languages. The
   # LSP is a protocol between an editor and a language server, which provides 
   # language features like auto complete, go to definition, etc.
   #
@@ -73,6 +84,12 @@
     "java",
     "rust"
   ]
+
+[[layers]]
+  #
+  # Enable the fuzzy finder.
+  #
+  name = "fzf"
 
 [[layers]]
   #
