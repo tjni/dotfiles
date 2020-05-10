@@ -87,16 +87,23 @@
 
 [[layers]]
   #
+  # We will try to use and improve coc.nvim for this.
+  #
+  name = "checkers"
+  enable = false
+
+[[layers]]
+  #
   # Enable the fuzzy finder.
   #
   name = "fzf"
 
 [[layers]]
   #
-  # Enable quick access to the shell, using SPC '.
+  # Disable access to the shell in vim. We will use tmux panes for this.
   #
   name = "shell"
-  default_position = "bottom"
+  enable = false
 
 [[layers]]
   #
