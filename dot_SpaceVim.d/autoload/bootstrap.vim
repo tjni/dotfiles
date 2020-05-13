@@ -10,6 +10,12 @@ function! bootstrap#before() abort
   "
   set inccommand=nosplit
 
+  "
+  " Use the left and right keys to switch buffers.
+  "
+  nnoremap <left>  :bp<CR>
+  nnoremap <right> :bn<CR>
+
 endfunction
 
 function! bootstrap#after() abort
@@ -23,6 +29,16 @@ function! bootstrap#after() abort
   " Modify the base16 theme to have brighter comments.
   "
   call Base16hi('Comment', g:base16_gui09, '', g:base16_cterm09, '', '', '')
+
+  " TODO: Figure out how CoC keybindings should be configured in SpaceVim.
+  " Use `[g` and `]g` to navigate diagnostics
+  nmap <silent> [g <Plug>(coc-diagnostic-prev)
+  nmap <silent> ]g <Plug>(coc-diagnostic-next)
+  " GoTo code navigation.
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent> gr <Plug>(coc-references)
 
   "
   " Register language servers with coc.nvim.
@@ -48,7 +64,7 @@ function! s:UseSpaceLeader() abort
   " its mappings for the [SPC] command if it detects the leader was already
   " set to <Space>, and we want to keep those mappings.
   "
-  let g:mapleader = '\<Space>'
+  let g:mapleader = "\<Space>"
 
   "
   " Until SpaceVim adds the option to set up a custom [SPC] mapping, we need

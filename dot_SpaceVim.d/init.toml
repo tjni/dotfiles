@@ -58,7 +58,6 @@
   # Disable plugins I do not use that SpaceVim adds by default.
   #
   disabled_plugins = [
-    "CompleteParameter.vim",
     "neco-syntax",
     "neoinclude.vim",
     "neosnippet-snippets",
