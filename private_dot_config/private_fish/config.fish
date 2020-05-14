@@ -22,7 +22,9 @@ if status --is-interactive
   # Replace a new interactive shell with tmux, using the first window as the
   # target window.
   #
-	tmux ^ /dev/null; and exec true
+  if test -z "$TMUX"
+    tmux new-session -A -s main; and exec true
+  end
 
   #
   # Consistency when opening a file.
