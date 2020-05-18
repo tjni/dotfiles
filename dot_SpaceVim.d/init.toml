@@ -52,7 +52,7 @@
   #
   # Turn off snippets to speed up load time. I don't find them useful.
   #
-  snippet_engine = ""
+  #snippet_engine = ""
 
   #
   # Disable plugins I do not use that SpaceVim adds by default.
