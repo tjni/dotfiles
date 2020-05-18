@@ -60,7 +60,11 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
+  {{- if eq .chezmoi.os "darwin" }}
   startup_mode: SimpleFullscreen
+  {{- else }}
+  #startup_mode: Windowed
+  {{- end }}
 
   # Window title
   #title: Alacritty
@@ -644,8 +648,9 @@ key_bindings:
   - { key: Down,     mods: Alt,     chars: "\x1b[1;5B"                   }
   - { key: Left,     mods: Alt,     chars: "\x1bb"                       }
   - { key: Right,    mods: Alt,     chars: "\x1bf"                       }
+  {{- if eq .chezmoi.os "darwin" }}
   - { key: Return, mods: Command, action: ToggleSimpleFullscreen }
-
+  {{- end }}
 
 #debug:
   # Display the time it takes to redraw each frame.
