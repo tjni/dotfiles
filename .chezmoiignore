@@ -1,0 +1,9 @@
+{{- if ne .chezmoi.os "linux" }}
+.config/rofi
+.config/bspwm
+.config/sxhkd
+.xinitrc
+{{- end }}
+{{- if ne .chezmoi.os "darwin" }}
+.hammerspoon
+{{- end }}

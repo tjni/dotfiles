@@ -1,0 +1,50 @@
+* {
+  background-color: black;
+  border-color: #303030;
+  text-color: #f2f1ef;
+  spacing: 0;
+  width: 38%;
+  font: "Hack Nerd Font Mono 16";
+  padding: 0 3px;
+}
+
+inputbar {
+  border: 0 0 1px 0;
+  children: [prompt,entry];
+}
+
+prompt {
+  padding: 15px;
+  border: 0 1px 0 0;
+  font: "Hack Nerd Font Mono 20";
+  color: #e5a724;
+}
+
+textbox {
+  background-color: #e5a724;
+  border: 0 0 1px 0;
+  border-color: black;
+  padding: 8px 16px;
+}
+
+entry {
+  padding: 15px;
+  font: "Hack Nerd Font Mono 20";
+}
+
+listview {
+  cycle: false;
+  margin: 0 0 -1px 0;
+  scrollbar: false;
+  lines: 10;
+}
+
+element {
+  padding: 10px;
+  text-color: #f2f1ef;
+}
+
+element selected {
+  text-color: #4e4e4e;
+  background-color: #e5a724;
+}
