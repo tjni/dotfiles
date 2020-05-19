@@ -54,5 +54,10 @@ fi
 #
 export SXHKD_SHELL='/usr/bin/sh'
 
+#
+# Switch the cursor from X11's default cross to the more familiar arrow.
+#
+xsetroot -cursor_name left_ptr
+
 feh --bg-scale --no-fehbg --randomize /usr/local/share/backgrounds/* &
 exec bspwm

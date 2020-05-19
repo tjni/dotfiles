@@ -1,6 +1,7 @@
 {{- if ne .chezmoi.os "linux" }}
 .config/rofi
 .config/bspwm
+.config/polybar
 .config/sxhkd
 .xinitrc
 {{- end }}

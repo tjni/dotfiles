@@ -1,5 +1,3 @@
 configuration {
   modi: "drun,window";
-  display-drun: "apps";
-  theme: "slate";
 }

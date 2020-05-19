@@ -10,7 +10,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show run
+	rofi -show run -theme slate
 
 # make sxhkd reload its configuration files:
 super + Escape
