@@ -1,12 +1,12 @@
 #
 # Set up home directory for Volta.
 #
-set -gx volta_home '/users/tni/.volta'
+set -gx volta_home "$HOME/.volta"
 
 #
 # Add directories to PATH.
 #
-set -U fish_user_paths $fish_user_paths ~/.cargo/bin '$volta_home/bin'
+set -U fish_user_paths $fish_user_paths "$HOME/.cargo/bin" "$volta_home/bin"
 
 {{- if eq .chezmoi.os "linux" }}
 
